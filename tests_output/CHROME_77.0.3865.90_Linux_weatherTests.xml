@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="0"
+            tests="1">
+
+  <testsuite name="weatherTests"
+    errors="2" failures="0" hostname="" id="" package="weatherTests" skipped="3"
+    tests="1" time="0.005000" timestamp="">
+  
+    <testcase name="Search for city" classname="weatherTests" time="0.005000" assertions="0">
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="Search for zip" classname="weatherTests">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Search for blank" classname="weatherTests">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Search for bad zip" classname="weatherTests">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

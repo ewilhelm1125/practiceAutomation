@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="employeePractice"
+    errors="1" failures="0" hostname="" id="" package="employeePractice" skipped="4"
+    tests="1" time="0.4140" timestamp="">
+  
+    <testcase name="Max error message check" classname="employeePractice" time="0.4140" assertions="0">
+    </testcase>
+  
+
+  
+
+  
+    
+    <testcase
+      name="No entry error message check" classname="employeePractice">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Entry check" classname="employeePractice">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Entry check Cancel" classname="employeePractice">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Add Employee check" classname="employeePractice">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

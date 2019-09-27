@@ -6,17 +6,18 @@ module.exports = {
         browser.end()
     },
     'Max error message check': browser => {
+        var newPerson = {name:'Robert Plant', phone: '5108675309', title:'rockstar'}
         browser
             .click('[name="employee1"]')
             .click('[name="nameEntry"]')
             .clearValue('[name="nameEntry"]')
-            .setValue('input[name="nameEntry"]', '1234567890123456789012345678901')
+            .setValue('[name="nameEntry"]', newPerson.name)
             .click('[name="phoneEntry"]')
             .clearValue('[name="phoneEntry"]')
-            .setValue('input[name="phoneEntry"]', '12345678901')
+            .setValue('input[name="phoneEntry"]', newPerson.phone)
             .click('[name="titleEntry"]')
             .clearValue('[name="titleEntry"]')
-            .setValue('input[name="titleEntry"]', '1234567890123456789012345678901')
+            .setValue('input[name="titleEntry"]', newPerson.title)
             .click('[name="save"]')
             .verify.visible('.errorCard')
             .click('[name="cancel"]')
