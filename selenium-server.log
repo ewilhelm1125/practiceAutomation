@@ -1,5 +1,20 @@
-11:38:06.467 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-11:38:06.521 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2019-09-27 11:38:06.558:INFO::main: Logging initialized @235ms to org.seleniumhq.jetty9.util.log.StdErrLog
-11:38:06.749 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-11:38:06.817 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+10:55:38.238 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+10:55:38.291 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-09-29 10:55:38.328:INFO::main: Logging initialized @243ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:55:38.516 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+10:55:38.580 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+10:55:38.754 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
+  "browserName": "chrome",
+  "chromeOptions": {
+    "w3c": false
+  },
+  "name": "Weather Tests"
+}
+10:55:38.756 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 29821
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+10:55:39.349 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+10:55:39.657 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 45974350b93c5f82cc486e9cd735dd2a (org.openqa.selenium.chrome.ChromeDriverService)
+10:55:45.123 INFO [ActiveSessions$1.onStop] - Removing session 45974350b93c5f82cc486e9cd735dd2a (org.openqa.selenium.chrome.ChromeDriverService)

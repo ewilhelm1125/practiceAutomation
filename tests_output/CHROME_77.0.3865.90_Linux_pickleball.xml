@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="0">
+            tests="1">
 
   <testsuite name="pickleball"
     errors="0" failures="0" hostname="" id="" package="pickleball" skipped="0"
-    tests="0" time="0.000" timestamp="">
+    tests="1" time="4.266" timestamp="">
+  
+    <testcase name="banner check" classname="pickleball" time="4.266" assertions="2">
+
+    
+
+    
+    </testcase>
   
 
   

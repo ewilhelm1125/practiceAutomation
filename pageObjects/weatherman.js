@@ -5,8 +5,11 @@ module.exports = {
         // resultCity: '',
         // errorMessage: ''
         
-             searchBar: '.enter-location__input'
-             resultingCity:'.current-weather__location'
-             errorMessage: '.error-message__message'
+             searchBar: '.enter-location__input',
+             resultCity:'.current-weather__location',
+             errorMessage: '.error-message__message',
+             searchButton:'[class="enter-location__submit"]',
+             searchAgainButton:'[class="current-weather__search-again"]',
+             tryAgainButton: '[class="error-message__try-again"]'
     }
 }

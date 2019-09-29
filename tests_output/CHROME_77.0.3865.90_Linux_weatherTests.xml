@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="2"
+<testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="5">
 
   <testsuite name="weatherTests"
-    errors="2" failures="0" hostname="" id="" package="weatherTests" skipped="3"
-    tests="1" time="0.005000" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="weatherTests" skipped="0"
+    tests="5" time="5.389" timestamp="">
   
-    <testcase name="Search for city" classname="weatherTests" time="0.005000" assertions="0">
+    <testcase name="Search for city" classname="weatherTests" time="1.322" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search for zip" classname="weatherTests" time="0.7470" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search for blank" classname="weatherTests" time="0.7150" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search for bad zip" classname="weatherTests" time="1.731" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Search again" classname="weatherTests" time="0.8740" assertions="2">
+
+    
+
+    
     </testcase>
   
 
   
 
-  
-    
-    <testcase
-      name="Search for zip" classname="weatherTests">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Search for blank" classname="weatherTests">
-      <skipped />
-    </testcase>
-    
-    <testcase
-      name="Search for bad zip" classname="weatherTests">
-      <skipped />
-    </testcase>
-    
   
   </testsuite>
 </testsuites>

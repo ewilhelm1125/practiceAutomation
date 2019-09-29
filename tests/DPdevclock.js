@@ -16,5 +16,6 @@ module.exports = {
             .useXpath()
             .click('//button[contains(@data-bind, "login")]')
             .expect.element('//label[contains(@data-bind, "logout")]').to.be.visible.before(20000)
+            browser.pause(10000)
     }
 }
