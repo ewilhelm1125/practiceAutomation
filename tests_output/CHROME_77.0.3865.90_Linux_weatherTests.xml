@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="0"
+<testsuites errors="1"
             failures="0"
             tests="1">
 
   <testsuite name="weatherTests"
-    errors="0" failures="0" hostname="" id="" package="weatherTests" skipped="0"
-    tests="1" time="1.243" timestamp="">
+    errors="1" failures="0" hostname="" id="" package="weatherTests" skipped="0"
+    tests="1" time="0.3850" timestamp="">
   
-    <testcase name="Search for city" classname="weatherTests" time="1.243" assertions="2">
-
-    
-
-    
+    <testcase name="Search for city" classname="weatherTests" time="0.3850" assertions="0">
     </testcase>
   
 

@@ -1,10 +1,17 @@
 var weatherPage
-var searchWeather = (pageObjects, search, result) => {
+var searchWeather = (pageObjects, data) => {
     pageObjects
-        .setValue('@searchBar', search)
+        .setValue('@searchBar', data.search)
         .click('@searchButton')
         .waitForElementVisible('@resultCity')
-        .verify.containsText('@resultCity',result)
+        .verify.containsText('@resultCity',data.result)
+
+var myData = [ 
+            {search: '84061', result: 'Provo'}, 
+            {search: 'San Francisco', result: 'San Francisco'},
+            {search: 'London', result: 'London'} 
+         ]
+
           
 }
 module.exports = {
@@ -13,7 +20,7 @@ module.exports = {
         weatherPage.navigate()
     },
     'Search for city': browser => {
-        searchWeather (weatherPage, '72761', 'Siloam Springs')
+        searchWeather (weatherPage, myData[0])
         // weatherPage
         //     .setValue('@searchBar', ['San Diego', browser.Keys.ENTER])
         //     .waitForElementPresent('@resultCity')
