@@ -1,8 +1,9 @@
 var mathMethods = {
-    add:(num1, num2) =>{return num1 + num2},
-    subtract= (num1, num2) => {return num1 - num2},
-    divide= (num1, num2) => {return num1 / num2},
-    multiply= (num1, num2) => {return num1 * num2} 
+    add: function (num1, num2) => {return num1 + num2;},
+    subtract= function (num1, num2) => {return num1 - num2;},
+    divide= function (num1, num2) => {return num1 / num2;},
+    multiply= function (num1, num2) => {return num1 * num2;}
+} 
 /**
  * returns the numbers added together
  * @param {number} num1 first number
@@ -50,23 +51,23 @@ module.exports = {
             .waitForElementPresent('#cwos', 2000)
             .expect.element('#cwos').text.to.contain(mathMethods.add(1,2))
     },
-    'check subtraction': browser => {
-        browser
-            .setValue('input[type="text"]', ['32-5', browser.Keys.ENTER])
-            .waitForElementPresent('#cwos', 2000)
-            .expect.element('#cwos').text.to.contain()
-    },
-    'check division': browser => {
-        browser
-            .setValue('input[type="text"]', ['8/2', browser.Keys.ENTER])
-            .waitForElementPresent('#cwos', 2000)
-            .expect.element('#cwos').text.to.contain()
-    },
-    'check multiplication': browser => {
-        browser
-            .setValue('input[type="text"]', ['2345.3333*2', browser.Keys.ENTER])
-            .waitForElementPresent('#cwos', 2000)
-            .expect.element('#cwos').text.to.contain()
-    },
+    // 'check subtraction': browser => {
+    //     browser
+    //         .setValue('input[type="text"]', ['32-5', browser.Keys.ENTER])
+    //         .waitForElementPresent('#cwos', 2000)
+    //         .expect.element('#cwos').text.to.contain()
+    // },
+    // 'check division': browser => {
+    //     browser
+    //         .setValue('input[type="text"]', ['8/2', browser.Keys.ENTER])
+    //         .waitForElementPresent('#cwos', 2000)
+    //         .expect.element('#cwos').text.to.contain()
+    // },
+    // 'check multiplication': browser => {
+    //     browser
+    //         .setValue('input[type="text"]', ['2345.3333*2', browser.Keys.ENTER])
+    //         .waitForElementPresent('#cwos', 2000)
+    //         .expect.element('#cwos').text.to.contain()
+    // },
     after: browser => browser.end()
 }

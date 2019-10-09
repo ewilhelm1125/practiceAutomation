@@ -1,14 +1,33 @@
-/**
- * Clicks an element whose text equals the `text` parameter - element must have a unique text value.
- * @param {object} browser - `browser`/`client` in use
- * @param {string} text - the text of the element that should be clicked
- */
-var clickByText = (browser, text) => {
-    browser
-        .useXpath()
-        .click(`//*[text()="${text}"]`)
-        .useCss()
-}
+// let idNumber = Number(result.value.slice(3))
+// browser
+//  .verify.ok(idNumber > 0, `The ID (${idNumber}) is a positive number.`)
+//  .verify.ok(idNumber % 1 === 0, `The ID (${idNumber}) is a whole number.`)
+// /**
+//  * Clicks an element whose text equals the `text` parameter - element must have a unique text value.
+//  * @param {object} browser - `browser`/`client` in use
+//  * @param {string} text - the text of the element that should be clicked
+//  */
+// var clickByText = (browser, text) => {
+//     browser
+//         .useXpath()
+//         .click(`//*[text()="${text}"]`)
+//         .useCss()
+// }
+
+var myData = {
+    name: 'Karl Pfister',
+    phone: '1234567890',
+    title: 'Lord of the Class',
+    number: '5',
+    number2: '8'
+},
+{
+    name: 'yup',
+    phone: '1234567990',
+    title: 'yyy',
+    number: '1',
+    number2: '9'
+},
 module.exports = {
     beforeEach: browser => {
         browser.url('https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html')
@@ -16,9 +35,15 @@ module.exports = {
     after: browser => {
         browser.end()
     },
+    'Change Employee Test': browser =>{
+        myData,forEach( test=> {
+            changeEmployee(page, test)
+        })
+    }
     'Changing an employee': browser => {
         clickByText(browser, 'Bernice Ortiz')
     }
+    
     // 'Max error message check': browser => {
     //     var newPerson = {name:'Robert Plant', phone: '5108675309', title:'rockstar'}
     //     browser

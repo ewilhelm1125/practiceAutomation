@@ -1,3 +1,15 @@
+/**
+ * Clicks an element whose text equals the `text` parameter - element must have a unique text value.
+ * @param {object} browser - `browser`/`client` in use
+ * @param {string} text - the text of the element that should be clicked
+ */
+var clickByText = (browser, text) => {
+    browser
+        .useXpath()
+        .click(`//*[text()="${text}"]`)
+        .useCss()
+}
+
 module.exports = {
     beforeEach: browser => browser.url('https://devmountain-qa.github.io/employee-manager/1.0_Version/index.html'),
     after: browser => browser.end(),

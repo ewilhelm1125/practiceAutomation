@@ -1,3 +1,15 @@
+/**
+ * Clicks an element whose text equals the `text` parameter - element must have a unique text value.
+ * @param {object} browser - `browser`/`client` in use
+ * @param {string} text - the text of the element that should be clicked
+ */
+var clickByText = (browser, text) => {
+    browser
+        .useXpath()
+        .click(`//*[text()="${text}"]`)
+        .useCss()
+}
+
 var employeePage
 module.exports = {
         beforeEach: browser => {
@@ -7,17 +19,17 @@ module.exports = {
     after: browser => {
         browser.end()
     },
-    'Selectors': browser => {
-        var searchBar = '.enter-location__input'
-        var submitButton = '.enter-location__submit'
-        var resultingCity = '.current-weather__location'
-        browser
-            .url('https://devmountain-qa.github.io/weatherman/build/index.html')
-            .setValue(searchBar, 'San Diego')
-            .click(submitButton)
-            .waitForElementVisible(resultingCity)
-            .verify.containsText(resultingCity, 'San Diego')
-    },
+    // 'Selectors': browser => {
+    //     var searchBar = '.enter-location__input'
+    //     var submitButton = '.enter-location__submit'
+    //     var resultingCity = '.current-weather__location'
+    //     browser
+    //         .url('https://devmountain-qa.github.io/weatherman/build/index.html')
+    //         .setValue(searchBar, 'San Diego')
+    //         .click(submitButton)
+    //         .waitForElementVisible(resultingCity)
+    //         .verify.containsText(resultingCity, 'San Diego')
+    // },
     'Test data': browser => {
         var newEmployeeName = 'Joe Blow'
         var newEmployeePhone = '5108675309'

@@ -1,26 +1,41 @@
-var weatherPage
+// var searchWeather = (pageObject, search, result) => {
+//     // steps for your search go here
+//  }
+
+
+var myData = [ 
+    {search: '84601', result: 'Provo'}, 
+    {search: 'San Francisco', result: 'San Francisco'},
+    {search: 'London', result: 'London'} 
+ ]
+
+
+
 var searchWeather = (pageObjects, data) => {
     pageObjects
         .setValue('@searchBar', data.search)
         .click('@searchButton')
         .waitForElementVisible('@resultCity')
         .verify.containsText('@resultCity',data.result)
-
-var myData = [ 
-            {search: '84061', result: 'Provo'}, 
-            {search: 'San Francisco', result: 'San Francisco'},
-            {search: 'London', result: 'London'} 
-         ]
-
-          
+        .api.refresh()
 }
+
+var weatherPage     
+
 module.exports = {
     beforeEach: browser => {
         weatherPage = browser.page.weatherman()
         weatherPage.navigate()
     },
+
     'Search for city': browser => {
-        searchWeather (weatherPage, myData[0])
+        myData.forEach(test => {
+            searchWeather(weatherPage, test)
+        })
+
+        searchWeather(weatherPage, myData[0])
+
+        // searchWeather (weatherPage, myData[0])
         // weatherPage
         //     .setValue('@searchBar', ['San Diego', browser.Keys.ENTER])
         //     .waitForElementPresent('@resultCity')
